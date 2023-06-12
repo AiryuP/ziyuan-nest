@@ -5,11 +5,11 @@ import { TypeOrmModule } from '@nestjs/typeorm'
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '39.105.49.87',
+      host: '39.105.187.92',
       port: 3306,
       username: 'root',
-      password: 'root',
-      database: '',
+      password: 'py1994',
+      database: 'ziyuan',
       retryDelay: 500,
       retryAttempts: 10
     })
