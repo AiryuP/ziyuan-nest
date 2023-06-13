@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { CodeModule } from './code/code.module';
 
 @Module({
   imports: [
@@ -11,8 +12,11 @@ import { TypeOrmModule } from '@nestjs/typeorm'
       password: 'py1994',
       database: 'ziyuan',
       retryDelay: 500,
-      retryAttempts: 10
-    })
+      retryAttempts: 10,
+      synchronize: true,
+      autoLoadEntities: true,
+    }),
+    CodeModule,
   ],
   controllers: [],
   providers: [],
